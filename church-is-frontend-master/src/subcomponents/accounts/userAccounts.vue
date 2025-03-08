@@ -1,6 +1,3 @@
-
-
-
 <!-- updated vue 3 code -->
 
 <!-- Child.vue -->

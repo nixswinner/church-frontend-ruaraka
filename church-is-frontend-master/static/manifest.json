@@ -1,15 +1,16 @@
 {
-    "name": "anvil church MS",
-    "short_name": "anvil",
-    "icons": [{
-      "src": "./src/assets/app_logo1.png",
+  "name": "Anvil Church MS",
+  "short_name": "Anvil",
+  "icons": [
+    {
+      "src": "/src/assets/app_logo1.png",
       "sizes": "512x512",
       "type": "image/png"
-    }],
-    "lang": "en-US",
-    "start_url": "/index.html",
-    "display": "standalone",
-    "background_color": "white",
-    "theme_color": "white"
-  }
-  
+    }
+  ],
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF"
+}
