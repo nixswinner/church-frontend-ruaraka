@@ -187,8 +187,8 @@
 
         <!-- Logo Selection -->
         <div class="card-header text-center border-0">
-          <img class="mr-0" style="width: 50px; height: auto" src="@/assets/app_logo1.png" v-if="hostName === 'my-domain' || hostName === 'anvilchurch'">
-          <img class="ml-4" style="width: 60px; height: auto; border-radius: 5px" src="@/assets/methodist_logo.jpeg" v-if="hostName === 'methodistkenya'" alt="logo not found">
+          <img class="mr-0" style="width: 50px; height: auto" src="../../assets/app_logo1.png" v-if="hostName === 'my-domain' || hostName === 'anvilchurch'">
+          <img class="ml-4" style="width: 60px; height: auto; border-radius: 5px" src="../../assets/methodist_logo.jpeg" v-if="hostName === 'methodistkenya'" alt="logo not found">
           <p>admin login</p>
         </div>
 
