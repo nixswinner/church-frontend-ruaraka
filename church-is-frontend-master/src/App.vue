@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="bg-blue">
     <section v-if="isLoggedIn" class="navbar navbar-expand-lg navbar-light sticky-top bg-white">
-      <img class="ml-4" style="width: 150px; height: auto" src="@/assets/text_logo.png"
+      <img class="ml-4" style="width: 150px; height: auto" src="./assets/text_logo.png"
            alt="logo not found"
            v-if="['my-domain', 'anvilchurch'].includes(hostName)"/>
     </section>
@@ -30,7 +30,7 @@ export default {
           localStorage.removeItem(key);
         }
       });
-      
+
       router.push("/");
       isLoggedIn.value = false;
     };

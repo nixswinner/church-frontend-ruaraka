@@ -23,21 +23,21 @@
         <div class="col-sm-12 col-md-8 col-lg-3">
 			<nav class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 				<a class="nav-link active list-group-item list-group-item-action border-0" id="pill-detail-tab" data-toggle="pill" href="#pill-detail" role="tab" aria-controls="pill-detail" aria-selected="true">
-					<img class="church-is-menu" src="@/assets/icons/icons8-contacts-208.png"> detail
+					<img class="church-is-menu" src="../../assets/icons/icons8-contacts-208.png"> detail
 				</a>
 				<a class="nav-link list-group-item list-group-item-action border-0" id="pill-groups-tab" data-toggle="pill" href="#pill-groups" role="tab" aria-controls="pill-groups" aria-selected="false" v-on:click = "getMemberGroups()">
-					<img class="church-is-menu" src="@/assets/icons/icons8-user-groups-filled-50.png"> groups
+					<img class="church-is-menu" src="../../assets/icons/icons8-user-groups-filled-50.png"> groups
 				</a>
 				<a class="nav-link list-group-item list-group-item-action border-0" id="pill-contributions-tab" data-toggle="pill" href="#pill-contributions" role="tab" aria-controls="pill-contributions" aria-selected="false" v-on:click = "getMemberFinances()">
-					<img class="church-is-menu" src="@/assets/icons/icons8-donate-filled-50.png"> finances
+					<img class="church-is-menu" src="../../assets/icons/icons8-donate-filled-50.png"> finances
 				</a>
 				<a class=" d-none nav-link list-group-item list-group-item-action border-0" id="pill-roles-tab" data-toggle="pill" href="#pill-roles"
 					role="tab" aria-controls="pill-roles" aria-selected="false">
-					<img class="church-is-menu" src="@/assets/icons/icons8-admin-settings-male-30.png"> roles
+					<img class="church-is-menu" src="../../assets/icons/icons8-admin-settings-male-30.png"> roles
 				</a>
 				<a class="nav-link list-group-item list-group-item-action border-0"
 				data-toggle="modal" data-target="#deleteMemberModal">
-						<img class="church-is-menu" src="@/assets/icons/icons8-cancel-26.png"> delete
+						<img class="church-is-menu" src="../../assets/icons/icons8-cancel-26.png"> delete
 				</a>
 			</nav>
         </div>
@@ -53,7 +53,7 @@
 				<div class="tab-pane fade" id="pill-groups" role="tabpanel" aria-labelledby="pill-groups-tab">
 						<hr class="d-sm-block d-lg-none">
 						<h3> Church Groups</h3>
-						<table class="table table-responsive-sm table-borderless" v-if = "groups_selected == true">
+						<table class="table table-responsive-sm table-borderless" v-if = "groups_selected === true">
 						<thead class=""  v-if = "church_groups.response.length > 0">
 							<tr>
 								<th>group</th>
@@ -64,7 +64,7 @@
 							<tr class="text-muted" v-for = "data in church_groups.response">
 								<td>
 									<router-link class="text-secondary" :to="`/groupDetail/`+ data.church_group.id ">
-										<img style="width: 30px ;height: auto" src="@/assets/icons/icons8-user-groups-48.png">
+										<img style="width: 30px ;height: auto" src="../../assets/icons/icons8-user-groups-48.png">
 										{{data.church_group_name}}
 									</router-link>
 								</td>
@@ -73,8 +73,8 @@
 							</tr>
 
 						</table>
-						<div v-if = "groups_selected == true">
-							<div v-if = "church_groups.response.length == 0 ">
+						<div v-if = "groups_selected === true">
+							<div v-if = "church_groups.response.length === 0 ">
 								<p class="text-muted">member belongs to none. </p>
 							</div>
 						</div>

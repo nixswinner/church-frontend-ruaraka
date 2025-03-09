@@ -11,17 +11,17 @@ upadate_group.vue  to vue 3
         <div class="row">
             <div class="col">
                 <h3>
-                    <img style="width: 30px; height: auto" src="@/assets/icons/icons8-folder-48.png">
+                    <img style="width: 30px; height: auto" src="../../assets/icons/icons8-folder-48.png">
                     {{ group_name }} / groups
                 </h3>
                 <hr/>
                 <div class="col-8 center-div" v-if="fetch_data_error.length > 0 && group_name">
                     <div class="center-div">
-                        <img style="height: 64px" src="@/assets/icons/icons8-wi-fi-off-64.png">
+                        <img style="height: 64px" src="../../assets/icons/icons8-wi-fi-off-64.png">
                         <p class="text-info">Check your connection</p>
                     </div>
                 </div>
-                <div v-if="fetch_data_error.length == 0">
+                <div v-if="fetch_data_error.length === 0">
                     Found <span class="badge badge-pill badge-secondary">{{ foundItems }}</span>
                     <p></p>
                     <table v-if="groups" class="table">
@@ -29,7 +29,7 @@ upadate_group.vue  to vue 3
                             <tr v-for="data in groups.response" :key="data.id">
                                 <td>
                                     <router-link class="text-secondary" style="text-decoration: none;" :to="`/groupDetail/` + data.id">
-                                        <img style="width: 30px; height: auto" src="@/assets/icons/icons8-user-groups-48.png">
+                                        <img style="width: 30px; height: auto" src="../../assets/icons/icons8-user-groups-48.png">
                                         {{ data.name }}
                                     </router-link>
                                 </td>
@@ -66,13 +66,13 @@ upadate_group.vue  to vue 3
                         <div class="form-group">
                             <label for="addGroup">Group Name</label>
                             <input type="text" class="form-control" maxlength="20" id="addGroup" v-model="name">
-                            <p v-if="name_errors.length">
+                            <div v-if="name_errors.length">
                                 <ul>
                                     <small><li v-for="error in name_errors" :key="error">
                                         <p class="text-danger">{{ error }}</p>
                                     </li></small>
                                 </ul>
-                            </p>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="addGroupDescription">Description</label>

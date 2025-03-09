@@ -218,7 +218,7 @@ const routes = [
   {
     path: '/reset-credentials/',
     name: 'credentialsReset',
-    component: () => import("@/components/auth/credentialsReset.vue")
+    component: () => import("../components/auth/credentialsReset.vue")
   },
   {
     path: '/',
@@ -334,17 +334,17 @@ const routes = [
   {
     path: '/sms-analytics/',
     name: 'smsAnalytics',
-    component: () => import('@/components/sms/smsAnalytics.vue')
+    component: () => import('../components/sms/smsAnalytics.vue')
   },
   {
     path: '/my-account/',
     name: 'myAccount',
-    component: () => import('@/components/account/myAccount.vue')
+    component: () => import('../components/account/myAccount.vue')
   },
   {
     path: '/news/',
     name: 'news',
-    component: () => import('@/components/news/news.vue')
+    component: () => import('../components/news/news.vue')
   }
 ];
 

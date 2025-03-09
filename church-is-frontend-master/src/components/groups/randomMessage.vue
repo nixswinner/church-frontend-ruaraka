@@ -73,7 +73,7 @@
                                     @change="handleFileUpload()" />
                             </label>
                         </div>
-                        <p v-if="test_csv_errors.length">
+                        <div v-if="test_csv_errors.length">
                             <ul>
                                 <small>
                                     <li v-for="error in test_csv_errors" :key="error">
@@ -81,7 +81,7 @@
                                     </li>
                                 </small>
                             </ul>
-                        </p>
+                        </div>
                         <div v-if="file_format_okay">
                             <p class="text-success">file okay, proceed to import</p>
                             <label for="">Your message</label>
@@ -90,7 +90,7 @@
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
                                 v-model="message"></textarea>
                         </div>
-                        <p v-if="error_500.length">
+                        <div v-if="error_500.length">
                             <ul>
                                 <small>
                                     <li v-for="error in error_500" :key="error">
@@ -100,7 +100,7 @@
                                     </li>
                                 </small>
                             </ul>
-                        </p>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">

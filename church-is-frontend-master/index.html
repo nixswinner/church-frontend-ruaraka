@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Church Admin App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Church Admin App</title>
 
-    <script src="https://kit.fontawesome.com/dce36c4ed2.js" crossorigin="anonymous"></script>
-    <link rel="manifest/" href="static/manifest.json" />
+  <script src="https://kit.fontawesome.com/dce36c4ed2.js" crossorigin="anonymous"></script>
+  <link rel="manifest" href="static/manifest.json" /> <!-- Fixed: Removed trailing slash -->
 
-    <style>
-        #myProgress {
-            border-radius: 7px;
-            width: 60vw;
-            background-color: #ddd;
-        }
-        #myBar {
-            width: 1%;
-            border-radius: 7px;
-            height: 7px;
-            background-color: #0275d8;
-        }
-    </style>
+  <style>
+    #myProgress {
+      border-radius: 7px;
+      width: 60vw;
+      background-color: #ddd;
+    }
+    #myBar {
+      width: 1%;
+      border-radius: 7px;
+      height: 7px;
+      background-color: #0275d8;
+    }
+  </style>
 </head>
 <body>
-    <div id="app">
-        <!-- splash page content -->
-        <div style="
+<div id="app">
+  <!-- splash page content -->
+  <div style="
             position: absolute;
             margin: auto;
             top: 0;
@@ -34,33 +34,46 @@
             left: 0;
             width: 50vw;
             height: 100px;">
-            <div>
-                <h1 style="color:darkgray">Getting things ready, Hang on ...</h1>
-                <div id="myProgress">
-                    <div id="myBar"></div>
-                </div>
-            </div>
-        </div>
+    <div>
+      <h1 style="color:darkgray">Getting things ready, Hang on ...</h1>
+      <div id="myProgress">
+        <div id="myBar"></div>
+      </div>
     </div>
+  </div>
+</div>
 
-    <script>
-        var i = 0;
-        if (i === 0) {
-            i = 1;
-            var elem = document.getElementById("myBar");
-            var width = 1;
-            var id = setInterval(frame, 100);
-            function frame() {
-                if (width >= 100) {
-                    clearInterval(id);
-                    i = 0;
-                } else {
-                    width++;
-                    elem.style.width = width + "%";
-                }
-            }
+<script>
+  console.log('Script loaded.');
+
+  let i = 0;
+  if (i === 0) {
+    i = 1;
+    const elem = document.getElementById("myBar");
+    let width = 1;
+    const id = setInterval(frame, 100);
+
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+        console.log('Progress bar complete. Navigating to home page...');
+
+        // Navigate to the home page
+        try {
+          window.location.href = "/";
+          console.log('Navigation initiated.');
+        } catch (error) {
+          console.error('Navigation failed:', error);
+          // Fallback: Reload the page if navigation fails
+          window.location.reload();
         }
-    </script>
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+</script>
 </body>
 </html>
-

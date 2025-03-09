@@ -25,7 +25,7 @@
                     <div v-if="add_member_error.length > 0" role="alert">
                         <!-- if no connection -->
                         <div class="col">
-                            <img style="height: 64px" src="@/assets/icons/icons8-wi-fi-off-64.png" />
+                            <img style="height: 64px" src="../../assets/icons/icons8-wi-fi-off-64.png" />
                             <p class="text-info">check your connection</p>
                         </div>
                         <div>
@@ -48,7 +48,7 @@
                                 <div class="col">
                                     <div class="mb-3 form-group">
                                         <input type="text" class="form-control" placeholder="First Name" v-model="first_name" autofocus />
-                                        <p v-if="first_name_errors.length">
+                                        <div v-if="first_name_errors.length">
                                             <ul>
                                                 <small>
                                                     <li v-for="error in first_name_errors" :key="error">
@@ -56,14 +56,14 @@
                                                     </li>
                                                 </small>
                                             </ul>
-                                        </p>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Middle Name" v-model="middle_name" />
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Last Name" v-model="last_name" />
-                                        <p v-if="last_name_errors.length">
+                                        <div v-if="last_name_errors.length">
                                             <ul>
                                                 <small>
                                                     <li v-for="error in last_name_errors" :key="error">
@@ -71,7 +71,7 @@
                                                     </li>
                                                 </small>
                                             </ul>
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@
                                         <div class="radio">
                                             <label><input type="radio" value="F" v-model="gender" /> Female</label>
                                         </div>
-                                        <p v-if="gender_errors.length">
+                                        <div v-if="gender_errors.length">
                                             <ul>
                                                 <small>
                                                     <li v-for="error in gender_errors" :key="error">
@@ -94,7 +94,7 @@
                                                     </li>
                                                 </small>
                                             </ul>
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@
                                                 <input type="text" class="form-control" placeholder="0712345678" v-model="phone_number" />
                                             </span>
                                         </div>
-                                        <p v-if="phone_number_errors.length">
+                                        <div v-if="phone_number_errors.length">
                                             <ul>
                                                 <small>
                                                     <li v-for="error in phone_number_errors" :key="error">
@@ -133,8 +133,8 @@
                                                     </li>
                                                 </small>
                                             </ul>
-                                        </p>
-                                        <p v-if="phone_number_OK.length">
+                                        </div>
+                                        <div v-if="phone_number_OK.length">
                                             <ul>
                                                 <small>
                                                     <li v-for="error in phone_number_OK" :key="error">
@@ -142,7 +142,7 @@
                                                     </li>
                                                 </small>
                                             </ul>
-                                        </p>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label><b>postal address :</b></label>

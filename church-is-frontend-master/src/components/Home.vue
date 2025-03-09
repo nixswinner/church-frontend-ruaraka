@@ -50,7 +50,7 @@
 
                         <div class="list-group-item flex-column align-items-start" v-for="data in pending_confirmations" :key="data.id">
                           <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1 font-weight-bold" v-if="data.type == 'O'">pending Offering</h5>
+                            <h5 class="mb-1 font-weight-bold" v-if="data.type === 'O'">pending Offering</h5>
                             <h5 class="mb-1 font-weight-bold" v-else>pending Tithe</h5>
                             <small class="text-muted">{{data.date}}</small>
                           </div>
@@ -68,7 +68,7 @@
                         <h3 v-if="pending_confirmations_projects.length" class="text-primary">Projects</h3>
                         <div class="list-group-item flex-column align-items-start" v-for="data in pending_confirmations_projects" :key="data.id">
                             <div class="d-flex w-100 justify-content-between">
-                              <h5 class="mb-1 font-weight-bold" v-if="data.type == 'C'">pending Contribution</h5>
+                              <h5 class="mb-1 font-weight-bold" v-if="data.type === 'C'">pending Contribution</h5>
                               <h5 class="mb-1 font-weight-bold" v-else>pending Pledge Settlement</h5>
                               <small class="text-muted">{{data.date}}</small>
                             </div>

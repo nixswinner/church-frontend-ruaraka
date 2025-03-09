@@ -142,7 +142,7 @@
                       maxlength="20"
                       v-model="name"
                     />
-                    <p v-if="name_errors.length">
+                    <div v-if="name_errors.length">
                       <ul>
                         <small>
                           <li v-for="error in name_errors" :key="error">
@@ -150,7 +150,7 @@
                           </li>
                         </small>
                       </ul>
-                    </p>
+                    </div>
                   </div>
                   <div class="form-group">
                     <label for="addGroupDescription">description</label>

@@ -108,7 +108,7 @@
                     <div class="col-6 text-success" v-if="income_amount > 0">
                       <h3>KSh {{ humanize(income_amount) }}</h3>
                     </div>
-                    <p v-if="income_amount_errors.length">
+                    <div v-if="income_amount_errors.length">
                       <ul>
                         <small>
                           <li v-for="error in income_amount_errors" :key="error">
@@ -116,7 +116,7 @@
                           </li>
                         </small>
                       </ul>
-                    </p>
+                    </div>
                   </div>
                   <hr />
                   <div class="row form-group">
