@@ -42,7 +42,7 @@ vue3-revamp/
 ## 🔧 Setup Instructions
 ### **1. Clone the Repository**
 ```sh
-git clone https://github.com/your-username/your-repo.git
+git clone "https://github.com/Bultut-yegon/Vue3-revamp.git"
 cd your-repo
 ```
 
