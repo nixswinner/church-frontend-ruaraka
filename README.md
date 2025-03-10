@@ -43,7 +43,7 @@ vue3-revamp/
 ### **1. Clone the Repository**
 ```sh
 git clone "https://github.com/Bultut-yegon/Vue3-revamp.git"
-cd your-repo
+cd Vue3-revamp
 ```
 
 ### **2. Install Dependencies**
