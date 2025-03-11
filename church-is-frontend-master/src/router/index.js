@@ -211,12 +211,12 @@ import login from "../components/auth/login";
 
 const routes = [
   {
-    path: '/login/',
+    path: '/login',
     name: 'login',
     component: login
   },
   {
-    path: '/reset-credentials/',
+    path: '/reset-credentials',
     name: 'credentialsReset',
     component: () => import("../components/auth/credentialsReset.vue")
   },
@@ -236,7 +236,7 @@ const routes = [
     component: memberDetail
   },
   {
-    path: '/memberAdd/',
+    path: '/memberAdd',
     name: 'memberAdd',
     component: memberAdd
   },
@@ -249,11 +249,11 @@ const routes = [
     path: '/groupsLanding',
     component: groupsLanding,
     children: [
-      {
-        path: '',
+      /*{
+        path: '/groupslanding',
         name: 'groupsLanding',
         component: groupList
-      },
+      },*/
       {
         path: '/groupList/:id/:group_name',
         name: 'groupList',
@@ -262,17 +262,17 @@ const routes = [
     ]
   },
   {
-    path: '/groupDetail/:id/',
+    path: '/groupDetail/:id',
     name: 'groupDetail',
     component: groupDetail
   },
   {
-    path: '/randomMessage/',
+    path: '/randomMessage',
     name: 'randomMessage',
     component: randomMessage
   },
   {
-    path: '/events/',
+    path: '/events',
     name: 'events',
     component: events
   },
@@ -287,7 +287,7 @@ const routes = [
     component: projectList
   },
   {
-    path: '/projectDetail/:id/',
+    path: '/projectDetail/:id',
     name: 'projectDetail',
     component: projectDetail
   },
@@ -297,7 +297,7 @@ const routes = [
     component: importPledgesFromCSV
   },
   {
-    path: '/generalFinance/',
+    path: '/generalFinance',
     name: 'generalFinance',
     component: generalFinance
   },
@@ -311,18 +311,18 @@ const routes = [
     name: 'expenditure',
     component: expenditure
   },
-  {
-    path: '/dailyVerse/',
+  /*{
+    path: '/dailyVerse',
     name: 'dailyVerse',
     component: dailyVerse
-  },
+  },*/
   {
-    path: '/sermons/',
+    path: '/sermons',
     name: 'sermons',
     component: sermons
   },
   {
-    path: '/services/',
+    path: '/services',
     name: 'services',
     component: services
   },
@@ -332,17 +332,17 @@ const routes = [
     component: serviceBookings
   },
   {
-    path: '/sms-analytics/',
+    path: '/sms-analytics',
     name: 'smsAnalytics',
     component: () => import('../components/sms/smsAnalytics.vue')
   },
   {
-    path: '/my-account/',
+    path: '/my-account',
     name: 'myAccount',
     component: () => import('../components/account/myAccount.vue')
   },
   {
-    path: '/news/',
+    path: '/news',
     name: 'news',
     component: () => import('../components/news/news.vue')
   }
@@ -352,5 +352,6 @@ const router = createRouter({
   history: createWebHistory(),
   routes
 });
+
 
 export default router;
