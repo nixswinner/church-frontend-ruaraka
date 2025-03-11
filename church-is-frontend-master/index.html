@@ -58,14 +58,12 @@
         clearInterval(id);
         console.log('Progress bar complete.');
 
-        // Navigate to the home page
         try {
           window.location.href = "/";
           console.log('Navigation initiated.');
         } catch (error) {
           console.error('Navigation failed:', error);
-          // Provide a fallback UI or message instead of reloading
-          alert('Unable to navigate. Please try again later.');
+         alert('Unable to navigate. Please try again later.');
         }
       } else {
         width++;
