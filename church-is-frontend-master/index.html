@@ -6,7 +6,7 @@
   <title>Church Admin App</title>
 
   <script src="https://kit.fontawesome.com/dce36c4ed2.js" crossorigin="anonymous"></script>
-  <link rel="manifest" href="static/manifest.json" /> <!-- Fixed: Removed trailing slash -->
+  <link rel="manifest" href="static/manifest.json" />
 
   <style>
     #myProgress {
@@ -56,8 +56,7 @@
     function frame() {
       if (width >= 100) {
         clearInterval(id);
-        i = 0;
-        console.log('Progress bar complete. Navigating to home page...');
+        console.log('Progress bar complete.');
 
         // Navigate to the home page
         try {
@@ -65,8 +64,8 @@
           console.log('Navigation initiated.');
         } catch (error) {
           console.error('Navigation failed:', error);
-          // Fallback: Reload the page if navigation fails
-          window.location.reload();
+          // Provide a fallback UI or message instead of reloading
+          alert('Unable to navigate. Please try again later.');
         }
       } else {
         width++;
@@ -75,5 +74,6 @@
     }
   }
 </script>
+
 </body>
 </html>

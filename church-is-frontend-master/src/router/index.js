@@ -179,35 +179,35 @@
 
 
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '@/components/Home';
+import Home from '../components/Home';
 
-import memberList from '@/components/member/memberList';
-import memberDetail from '@/components/member/memberDetail';
-import memberAdd from '@/components/member/memberAdd';
-import adminRoles from '@/components/member/adminRoles';
+import memberList from '../components/member/memberList';
+import memberDetail from '../components/member/memberDetail';
+import memberAdd from '../components/member/memberAdd';
+import adminRoles from '../components/member/adminRoles';
 
-import groupsLanding from '@/components/groups/groupsLanding';
-import groupList from "@/components/groups/groupList";
-import groupDetail from "@/components/groups/groupDetail";
-import randomMessage from "@/components/groups/randomMessage";
+import groupsLanding from '../components/groups/groupsLanding';
+import groupList from "../components/groups/groupList";
+import groupDetail from "../components/groups/groupDetail";
+import randomMessage from "../components/groups/randomMessage";
 
-import events from "@/components/events/events";
-import eventDetail from '@/components/events/eventdetail';
+import events from "../components/events/events";
+import eventDetail from '../components/events/eventdetail';
 
-import projectList from "@/components/projects/projectList";
-import projectDetail from "@/components/projects/projectDetail";
-import importPledgesFromCSV from "@/components/projects/importPledgesFromCSV";
+import projectList from "../components/projects/projectList";
+import projectDetail from "../components/projects/projectDetail";
+import importPledgesFromCSV from "../components/projects/importPledgesFromCSV";
 
-import generalFinance from "@/components/finance/generalFinance";
-import income from "@/components/finance/income";
-import expenditure from "@/components/finance/expenditure";
+import generalFinance from "../components/finance/generalFinance";
+import income from "../components/finance/income";
+import expenditure from "../components/finance/expenditure";
 
-import dailyVerse from "@/components/daily-verses/dailyVerse";
-import sermons from "@/components/sermons/sermons";
-import services from "@/components/services/services";
-import serviceBookings from "@/components/services/serviceBookings";
+import dailyVerse from "../components/daily-verses/dailyVerse";
+import sermons from "../components/sermons/sermons";
+import services from "../components/services/services";
+import serviceBookings from "../components/services/serviceBookings";
 
-import login from "@/components/auth/login";
+import login from "../components/auth/login";
 
 const routes = [
   {
