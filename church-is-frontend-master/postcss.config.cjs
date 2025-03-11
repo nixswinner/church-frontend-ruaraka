@@ -1,6 +1,6 @@
 // https://github.com/michael-ciniawsky/postcss-load-config
 
-// postcss.config.js (Vite-compatible)
+// postcss.config.cjs (Vite-compatible)
 
 module.exports = {
   plugins: {

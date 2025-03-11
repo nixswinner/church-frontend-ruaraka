@@ -20,7 +20,7 @@
         <div class="continer">
             <div class="row">
                 <div class="col-12 col-sm-10 col-md-8 col-lg-2">
-                    <a href="#" v-if="member_found" @click="backToSearch()" role="button" aria-expanded="false">
+                    <a href="#" v-if="member_found" @click="backToSearch" role="button" aria-expanded="false">
                         <div class="moreButton">
                             <b> back to search</b>
                         </div>
@@ -87,7 +87,7 @@
                                             <tr v-for="data in roles.response" :key="data.id">
                                                 <td>
                                                     <span v-for="data2 in roles_for_member.response" :key="data2.role.role">
-                                                        <span v-if="data2.role.role == data.role">
+                                                        <span v-if="data2.role.role === data.role">
                                                             <input multiple class="form-check-input" type="checkbox" :value="data.id" v-model="selected_role" disabled />
                                                         </span>
                                                         <span v-else>
@@ -215,6 +215,11 @@ export default {
           })
           .catch(() => {});
       }
+    };
+
+    const backToSearch = () => {
+      this.member_found = false
+      this.memberSearch = ''
     };
 
     // Debounce the search function

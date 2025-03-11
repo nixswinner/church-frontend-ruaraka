@@ -26,7 +26,7 @@
                             id="pill-detail-tab"
                             data-toggle="pill" href="#pill-dashboard" role="tab"
                             aria-controls="pill-dashboard" aria-selected="true">
-                            <img class="church-is-menu" src="@/assets/icons/icons8-group-of-projects-filled-50.png">
+                            <img class="church-is-menu" src="../../assets/icons/icons8-group-of-projects-filled-50.png">
                             dashboard
                         </a>
                         <a
@@ -34,7 +34,7 @@
                             id="pill-user-accounts-tab" data-toggle="pill"
                             href="#pill-user-accounts" role="tab" aria-controls="pill-user-accounts"
                             aria-selected="false" @click="getPermissionGroups">
-                            <img class="church-is-menu" src="@/assets/icons/icons8-contacts-208.png">
+                            <img class="church-is-menu" src="../../assets/icons/icons8-contacts-208.png">
                             user accounts
                         </a>
                     </nav>
@@ -413,7 +413,7 @@
 <script>
 import { defineComponent, ref, onMounted } from 'vue';
 import axios from 'axios'; // Ensure Axios is used if not globally set
-import userAccounts from '@/subcomponents/accounts/userAccounts';
+import userAccounts from '../../subcomponents/accounts/userAccounts';
 
 export default defineComponent({
   name: 'myAccount',

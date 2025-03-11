@@ -179,46 +179,46 @@
 
 
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '@/components/Home';
+import Home from '../components/Home';
 
-import memberList from '@/components/member/memberList';
-import memberDetail from '@/components/member/memberDetail';
-import memberAdd from '@/components/member/memberAdd';
-import adminRoles from '@/components/member/adminRoles';
+import memberList from '../components/member/memberList';
+import memberDetail from '../components/member/memberDetail';
+import memberAdd from '../components/member/memberAdd';
+import adminRoles from '../components/member/adminRoles';
 
-import groupsLanding from '@/components/groups/groupsLanding';
-import groupList from "@/components/groups/groupList";
-import groupDetail from "@/components/groups/groupDetail";
-import randomMessage from "@/components/groups/randomMessage";
+import groupsLanding from '../components/groups/groupsLanding';
+import groupList from "../components/groups/groupList";
+import groupDetail from "../components/groups/groupDetail";
+import randomMessage from "../components/groups/randomMessage";
 
-import events from "@/components/events/events";
-import eventDetail from '@/components/events/eventdetail';
+import events from "../components/events/events";
+import eventDetail from '../components/events/eventdetail';
 
-import projectList from "@/components/projects/projectList";
-import projectDetail from "@/components/projects/projectDetail";
-import importPledgesFromCSV from "@/components/projects/importPledgesFromCSV";
+import projectList from "../components/projects/projectList";
+import projectDetail from "../components/projects/projectDetail";
+import importPledgesFromCSV from "../components/projects/importPledgesFromCSV";
 
-import generalFinance from "@/components/finance/generalFinance";
-import income from "@/components/finance/income";
-import expenditure from "@/components/finance/expenditure";
+import generalFinance from "../components/finance/generalFinance";
+import income from "../components/finance/income";
+import expenditure from "../components/finance/expenditure";
 
-import dailyVerse from "@/components/daily-verses/dailyVerse";
-import sermons from "@/components/sermons/sermons";
-import services from "@/components/services/services";
-import serviceBookings from "@/components/services/serviceBookings";
+import dailyVerse from "../components/daily-verses/dailyVerse";
+import sermons from "../components/sermons/sermons";
+import services from "../components/services/services";
+import serviceBookings from "../components/services/serviceBookings";
 
-import login from "@/components/auth/login";
+import login from "../components/auth/login";
 
 const routes = [
   {
-    path: '/login/',
+    path: '/login',
     name: 'login',
     component: login
   },
   {
-    path: '/reset-credentials/',
+    path: '/reset-credentials',
     name: 'credentialsReset',
-    component: () => import("@/components/auth/credentialsReset.vue")
+    component: () => import("../components/auth/credentialsReset.vue")
   },
   {
     path: '/',
@@ -236,7 +236,7 @@ const routes = [
     component: memberDetail
   },
   {
-    path: '/memberAdd/',
+    path: '/memberAdd',
     name: 'memberAdd',
     component: memberAdd
   },
@@ -249,11 +249,11 @@ const routes = [
     path: '/groupsLanding',
     component: groupsLanding,
     children: [
-      {
-        path: '',
+      /*{
+        path: '/groupslanding',
         name: 'groupsLanding',
         component: groupList
-      },
+      },*/
       {
         path: '/groupList/:id/:group_name',
         name: 'groupList',
@@ -262,17 +262,17 @@ const routes = [
     ]
   },
   {
-    path: '/groupDetail/:id/',
+    path: '/groupDetail/:id',
     name: 'groupDetail',
     component: groupDetail
   },
   {
-    path: '/randomMessage/',
+    path: '/randomMessage',
     name: 'randomMessage',
     component: randomMessage
   },
   {
-    path: '/events/',
+    path: '/events',
     name: 'events',
     component: events
   },
@@ -287,7 +287,7 @@ const routes = [
     component: projectList
   },
   {
-    path: '/projectDetail/:id/',
+    path: '/projectDetail/:id',
     name: 'projectDetail',
     component: projectDetail
   },
@@ -297,7 +297,7 @@ const routes = [
     component: importPledgesFromCSV
   },
   {
-    path: '/generalFinance/',
+    path: '/generalFinance',
     name: 'generalFinance',
     component: generalFinance
   },
@@ -311,18 +311,18 @@ const routes = [
     name: 'expenditure',
     component: expenditure
   },
-  {
-    path: '/dailyVerse/',
+  /*{
+    path: '/dailyVerse',
     name: 'dailyVerse',
     component: dailyVerse
-  },
+  },*/
   {
-    path: '/sermons/',
+    path: '/sermons',
     name: 'sermons',
     component: sermons
   },
   {
-    path: '/services/',
+    path: '/services',
     name: 'services',
     component: services
   },
@@ -332,19 +332,19 @@ const routes = [
     component: serviceBookings
   },
   {
-    path: '/sms-analytics/',
+    path: '/sms-analytics',
     name: 'smsAnalytics',
-    component: () => import('@/components/sms/smsAnalytics.vue')
+    component: () => import('../components/sms/smsAnalytics.vue')
   },
   {
-    path: '/my-account/',
+    path: '/my-account',
     name: 'myAccount',
-    component: () => import('@/components/account/myAccount.vue')
+    component: () => import('../components/account/myAccount.vue')
   },
   {
-    path: '/news/',
+    path: '/news',
     name: 'news',
-    component: () => import('@/components/news/news.vue')
+    component: () => import('../components/news/news.vue')
   }
 ];
 
@@ -352,5 +352,6 @@ const router = createRouter({
   history: createWebHistory(),
   routes
 });
+
 
 export default router;

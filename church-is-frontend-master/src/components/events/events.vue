@@ -61,7 +61,7 @@
                         <div v-for="event in events" :key="event.id">
                             <div class="card mb-5">
                                 <div class="mt-3 ml-3">
-                                    <img style="width: 45px; height: auto" src="@/assets/icons/icons8-schedule-64.png">
+                                    <img style="width: 45px; height: auto" src="../../assets/icons/icons8-schedule-64.png">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">

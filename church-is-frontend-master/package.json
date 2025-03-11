@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A Vue.js project using Vite",
   "author": "casper <orichcasper@gmail.com>",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "vite --clearScreen false",
