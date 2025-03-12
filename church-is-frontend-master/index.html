@@ -54,12 +54,12 @@
     const id = setInterval(frame, 100);
 
     function frame() {
-      if (width >= 100) {
+      if (width === 100) {
         clearInterval(id);
         console.log('Progress bar complete.');
 
         try {
-          window.location.href = "/";
+          window.location.href = "/login";
           console.log('Navigation initiated.');
         } catch (error) {
           console.error('Navigation failed:', error);
