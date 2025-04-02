@@ -3,12 +3,8 @@ name: Docker Build
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - 'church-is-frontend-master/**'
   pull_request:
     branches: [ "main" ]
-    paths:
-      - 'church-is-frontend-master/**'
   workflow_dispatch:  # Allow manual triggering
 
 jobs:
