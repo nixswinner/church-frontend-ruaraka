@@ -5,7 +5,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY package*.json ./
 RUN npm install --legacy-peer-deps
-COPY .env.local .env.local
+#COPY .env.local .env.local
 
 FROM base AS builder
 WORKDIR /app
