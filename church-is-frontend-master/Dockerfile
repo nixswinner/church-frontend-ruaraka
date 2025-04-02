@@ -4,38 +4,24 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY package*.json ./
-RUN npm install --legacy-peer-deps
-#COPY .env.local .env.local
+RUN npm install
 
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-ENV NEXT_TELEMETRY_DISABLED 1
-# Set standalone output explicitly
-ENV NEXT_OUTPUT_STANDALONE true
+ENV NODE_ENV production
+# Build the Vue application
 RUN npm run build
 
-FROM base AS runner
-WORKDIR /app
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+FROM nginx:stable-alpine AS runner
+# Copy the built app to nginx server
+COPY --from=builder /app/dist /usr/share/nginx/html
+# Copy custom nginx config if needed
+# COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy public folder
-COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+# Expose port 80
+EXPOSE 80
 
-# Copy everything from .next
-COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
-COPY --from=builder --chown=nextjs:nodejs /app/node_modules ./node_modules
-COPY --from=builder --chown=nextjs:nodejs /app/package.json ./
-
-# Set the correct permissions
-USER nextjs
-EXPOSE 3000
-ENV PORT 3000
-ENV HOSTNAME "0.0.0.0"
-
-# Use npm start which works regardless of standalone mode
-CMD ["npm", "start"]
+# Start nginx server
+CMD ["nginx", "-g", "daemon off;"]
